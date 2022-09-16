@@ -4,22 +4,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchbarComponent } from './Components/searchbar/searchbar.component';
+import { InformationPanelComponent } from './pages/information-panel/information-panel.component';
+import { PagesComponent } from './pages/pages.component';
 import { ObjToArrayPipe } from './pipes/objToArray.pipe';
-import { SharedModule } from './shared/shared.module';
 import { SideNavComponent } from './shared/side-nav/side-nav.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchbarComponent,
+    PagesComponent,
     SideNavComponent,
-    ObjToArrayPipe
+    ObjToArrayPipe,
+    InformationPanelComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

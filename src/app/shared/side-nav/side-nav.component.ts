@@ -1,14 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
-  styleUrls: ['./side-nav.component.scss']
+  styleUrls: ['./side-nav.component.scss'],
 })
 export class SideNavComponent implements OnInit {
+  @ViewChild('subMenuTransacciones') subMenuTransacciones!: ElementRef ;
+  constructor() { 
+    
+  }
 
+  ngOnInit(): void {
+  }
+
+  
   Transacciones = {
-    Facturas: {name:'Facturas', icon: 'fa-solid fa-file-invoice ml-0.5', url: ''},
+    Facturas: {name:'Facturas', icon: 'fa-solid fa-file-invoice ml-0.5', url: '/'},
     Pagos: {name: 'Pagos', icon: 'fa-solid fa-receipt', url: ''},
     CambioDeDivisas:{name: 'Cambios de divisas', icon: 'fa-solid fa-file-zipper', url: ''},
     NotasDeCredito:{name: 'Notas de crédito', icon: 'fa-solid fa-money-check-dollar', url: ''},
@@ -43,14 +51,10 @@ export class SideNavComponent implements OnInit {
     CiclosDeFacturacion: {name: 'Ciclos de facturación', icon: 'fa-solid fa-arrows-spin', url: ''},
     ProgramacionDeFacturacion: {name: 'Programación de facturación', icon: 'fa-solid fa-gears', url: ''},
   }
-
-
-
-  constructor() { 
+  // TODO: drowpdown no funciona
+  dropdown(){
+    this.subMenuTransacciones.nativeElement.classList.toogle('hidden')
+    console.log('hola')
   }
-
-  ngOnInit(): void {
-  }
- 
 
 }

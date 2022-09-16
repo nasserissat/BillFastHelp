@@ -1,9 +1,8 @@
-<aside class="w-64 h-screen bg-white " aria-label="Sidebar">
+<aside class="w-64 h-screen bg-white" aria-label="Sidebar">
   <div class="overflow-y-auto py-4 px-3 rounded-r">
     <!--============================-->
     <!--MENU DEL SIDENAV-->
     <ul class="space-y-2">
-
         <!--============================-->
         <!--LOGO-->
         <li>
@@ -34,18 +33,18 @@
          <!--============================-->
          <!--MENU TRANSACCIONES-->
         <li>
-            <a routerLink="" type="button" class="flex items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <button type="button" (click)="dropdown()" class="flex items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                 <div>
                     <i class="fa-solid fa-money-bill-transfer"></i> 
-                    <span class="ml-3">Transacciones</span>
+                    <span class="ml-3" >Transacciones</span>
                 </div>
                 <i class="fa-solid fa-chevron-left"></i>
-            </a>
+            </button>
             <!--============================-->
             <!--SUBMENU TRANSACCIONES-->
-            <ul class=" space-y-2 text-zinc-700" *ngFor="let transaccion of Transacciones | ObjToArray">
+            <ul #subMenuTransacciones class="hidden space-y-2 text-zinc-700" *ngFor="let transaccion of Transacciones | ObjToArray">
                 <li>
-                    <a routerLink="{{transaccion.url}}" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                         <i class="{{transaccion.icon}}"></i>
                             <span class="ml-5 ">{{transaccion.name}}</span>
                     </a>
@@ -71,7 +70,7 @@
             <!--SUBMENU CATALOGOS-->
             <ul class="hidden space-y-2 text-zinc-700"  *ngFor="let catalogo of Catalogos | ObjToArray">
                 <li>
-                    <a routerLink="{{catalogo.url}}" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                         <i class={{catalogo.icon}}></i>
                         <span class="ml-5 ">{{catalogo.name}}</span>
                     </a>
@@ -97,7 +96,7 @@
             <!-- SUBMENU SERVICIO AL CLIENTE-->
             <ul class="hidden space-y-2 text-zinc-700" *ngFor="let servicioAlCliente of ServicioAlCliente | ObjToArray">
                 <li>
-                    <a routerLink="{{servicioAlCliente.url}}" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                         <i class={{servicioAlCliente.icon}}></i>
                         <span class="ml-5 ">{{servicioAlCliente.name}}</span>
                     </a>
@@ -123,7 +122,7 @@
             <!-- SUBMENU GESTION TRABAJO-->
             <ul class="hidden space-y-2 text-zinc-700" *ngFor="let gestionDeTrabajo of GestionDeTrabajo | ObjToArray" >
                 <li>
-                    <a routerLink="{{gestionDeTrabajo.url}}" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                         <i class={{gestionDeTrabajo.icon}}></i>
                         <span class="ml-5 ">{{gestionDeTrabajo.name}}</span>
                     </a>
@@ -149,7 +148,7 @@
             <!-- SUBMENU PLANIFICACION-->
             <ul class="hidden space-y-2 text-zinc-700" *ngFor="let planificacion of Planificacion | ObjToArray">
                 <li>
-                    <a routerLink="{{planificacion.url}}" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                         <i class={{planificacion.icon}}></i>
                         <span class="ml-5 ">{{planificacion.name}}</span>
                     </a>

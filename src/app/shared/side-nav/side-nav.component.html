@@ -2,23 +2,220 @@
   <div class="overflow-y-auto py-4 px-3 rounded-r">
     <ul class="space-y-2">
         <li>
-            <a href="#" class="flex items-center w-full px-5 py-2 rounded transition duration-75 group  hover:bg-gray-300">
-                <i class="fa-solid fa-arrows-to-eye"></i>
-                <span class="ml-3">Panel informativo</span>
-                <i class="fa-solid fa-arrow-left"></i>
+            <a routerLink="" class="flex items-center justify-start w-full px-5 py-2 mb-5">   
+                    <img src="../../../assets/logo-billfast.png" class="w-9 h-9"> 
+                    <span class="ml-3 text-lg">BillFast</span>
             </a>
         </li>
         <li>
-            <button type="button" class="flex items-center w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                <i class="fa-solid fa-money-bill-transfer"></i> 
-                <span class="ml-3">Transacciones</span>
-                <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <ul #dropDownTransactions>
+            <a routerLink="" class="flex items-center justify-between w-full px-5 py-2 mb-5 rounded transition duration-75 group  hover:bg-gray-300">
+                <div>
+                    <i class="fa-solid fa-table-cells"></i>
+                    <span class="ml-3">Panel informativo</span>
+                </div>
+            </a>
+        </li>
+        <li> 
+            <span class="ml-4 text-sm">Transacciones</span>
+        </li>
+        <li>
+            <a routerLink="" type="button" class="flex items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <div>
+                    <i class="fa-solid fa-money-bill-transfer"></i> 
+                    <span class="ml-3">Transacciones</span>
+                </div>
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <ul #dropDownTransactions class="hidden space-y-2 text-zinc-700">
                 <li>
-                    <a href=""></a>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                            <i class="fa-solid fa-file-invoice ml-0.5"></i>
+                            <span class="ml-5 ">Facturas</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                            <i class="fa-solid fa-receipt"></i>
+                            <span class="ml-5"><a routerLink="">Pagos</a></span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                            <i class="fa-solid fa-file-zipper"></i>
+                            <span class="ml-5"><a routerLink="">Cambio de divisas</a></span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            <span class="ml-5"><a routerLink="">Notas de crédito</a></span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <span class="ml-5"><a routerLink="">Notas de débito</a></span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <span class="ml-5"><a routerLink="">Cargos</a></span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                            <i class="fa-solid fa-file-zipper"></i>
+                            <span class="ml-5"><a routerLink="">Lotes de facturación</a></span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                            <i class="fa-solid fa-file-zipper"></i>
+                            <span class="ml-5"><a routerLink="">Impresión masiva</a></span>
+                    </a>
                 </li>
             </ul>
+        </li>
+        <li>
+            <a routerLink="" type="button" class="flex items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <div>
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span class="ml-3">Catálogos</span>
+                </div>
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <ul #dropDownTransactions class=" space-y-2 text-zinc-700">
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-id-badge"></i>
+                        <span class="ml-5 ">Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-signs-post"></i>
+                        <span class="ml-5 ">Direcciones</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-scroll"></i>
+                        <span class="ml-5 ">Suscripciones</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <span class="ml-5 ">Productos</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <span class="ml-5 ">Materiales</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a routerLink="" type="button" class="flex items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <div>
+                    <i class="fa-solid fa-face-smile"></i> 
+                    <span class="ml-3">Servicio al cliente</span>
+                </div>
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <ul #dropDownTransactions class="hidden space-y-2 text-zinc-700">
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-ticket"></i>
+                        <span class="ml-5 ">Tickets</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-id-badge"></i>
+                        <span class="ml-5 ">Reclamaciones</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-file-signature"></i>
+                        <span class="ml-5 ">Acuerdos de pago</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-stamp"></i>
+                        <span class="ml-5 ">Certificados de No Adeudo</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a routerLink="" type="button" class="flex items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <div>
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span class="ml-3">Gestión del trabajo</span>
+                </div>
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <ul #dropDownTransactions class="hidden space-y-2 text-zinc-700">
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-folder"></i>
+                        <span class="ml-5 ">Ordenes de trabajo</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-folder-tree"></i>
+                        <span class="ml-5 ">Tipos de ordenes de trabajo</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a routerLink="" type="button" class="flex items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <div>
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span class="ml-3">Planificación</span>
+                </div>
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <ul #dropDownTransactions class="hidden space-y-2 text-zinc-700">
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-signs-post"></i>
+                        <span class="ml-5 ">Rutas</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-sitemap"></i>
+                        <span class="ml-5 ">Tipos de rutas</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-arrows-spin"></i>
+                        <span class="ml-5 ">Ciclos de facturación</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <i class="fa-solid fa-gears"></i>
+                        <span class="ml-5 ">Programación de facturación</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a routerLink="" type="button" class="flex items-center w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <i class="fa-solid fa-print"></i> 
+                    <span class="ml-3">Reportes</span>
+            </a>
         </li>
     </ul>
 

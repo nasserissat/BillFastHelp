@@ -26,53 +26,11 @@
                 </div>
                 <i class="fa-solid fa-chevron-left"></i>
             </a>
-            <ul #dropDownTransactions class="hidden space-y-2 text-zinc-700">
+            <ul class="hidden space-y-2 text-zinc-700" *ngFor="let transaction of Transacciones | ObjToArray">
                 <li>
                     <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <i class="fa-solid fa-file-invoice ml-0.5"></i>
-                            <span class="ml-5 ">Facturas</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <i class="fa-solid fa-receipt"></i>
-                            <span class="ml-5"><a routerLink="">Pagos</a></span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <i class="fa-solid fa-file-zipper"></i>
-                            <span class="ml-5"><a routerLink="">Cambio de divisas</a></span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <i class="fa-solid fa-money-check-dollar"></i>
-                            <span class="ml-5"><a routerLink="">Notas de crédito</a></span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
-                            <span class="ml-5"><a routerLink="">Notas de débito</a></span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-file-invoice-dollar"></i>
-                            <span class="ml-5"><a routerLink="">Cargos</a></span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <i class="fa-solid fa-file-zipper"></i>
-                            <span class="ml-5"><a routerLink="">Lotes de facturación</a></span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <i class="fa-solid fa-file-zipper"></i>
-                            <span class="ml-5"><a routerLink="">Impresión masiva</a></span>
+                        <i class="{{transaction.icon}}"></i>
+                            <span class="ml-5 ">{{transaction.name}}</span>
                     </a>
                 </li>
             </ul>
@@ -85,37 +43,13 @@
                 </div>
                 <i class="fa-solid fa-chevron-left"></i>
             </a>
-            <ul #dropDownTransactions class=" space-y-2 text-zinc-700">
+            <ul class="hidden space-y-2 text-zinc-700"  *ngFor="let catalogo of Catalogos | ObjToArray">
                 <li>
                     <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-id-badge"></i>
-                        <span class="ml-5 ">Clientes</span>
+                        <i class={{catalogo.icon}}></i>
+                        <span class="ml-5 ">{{catalogo.name}}</span>
                     </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-signs-post"></i>
-                        <span class="ml-5 ">Direcciones</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-scroll"></i>
-                        <span class="ml-5 ">Suscripciones</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-boxes-stacked"></i>
-                        <span class="ml-5 ">Productos</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-boxes-stacked"></i>
-                        <span class="ml-5 ">Materiales</span>
-                    </a>
-                </li>
+                </li>     
             </ul>
         </li>
         <li>
@@ -126,29 +60,11 @@
                 </div>
                 <i class="fa-solid fa-chevron-left"></i>
             </a>
-            <ul #dropDownTransactions class="hidden space-y-2 text-zinc-700">
+            <ul class="hidden space-y-2 text-zinc-700" *ngFor="let servicioAlCliente of ServicioAlCliente | ObjToArray">
                 <li>
                     <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-ticket"></i>
-                        <span class="ml-5 ">Tickets</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-id-badge"></i>
-                        <span class="ml-5 ">Reclamaciones</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-file-signature"></i>
-                        <span class="ml-5 ">Acuerdos de pago</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-stamp"></i>
-                        <span class="ml-5 ">Certificados de No Adeudo</span>
+                        <i class={{servicioAlCliente.icon}}></i>
+                        <span class="ml-5 ">{{servicioAlCliente.name}}</span>
                     </a>
                 </li>
             </ul>
@@ -161,17 +77,11 @@
                 </div>
                 <i class="fa-solid fa-chevron-left"></i>
             </a>
-            <ul #dropDownTransactions class="hidden space-y-2 text-zinc-700">
+            <ul class="hidden space-y-2 text-zinc-700" *ngFor="let gestionDeTrabajo of GestionDeTrabajo | ObjToArray" >
                 <li>
                     <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-folder"></i>
-                        <span class="ml-5 ">Ordenes de trabajo</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-folder-tree"></i>
-                        <span class="ml-5 ">Tipos de ordenes de trabajo</span>
+                        <i class={{gestionDeTrabajo.icon}}></i>
+                        <span class="ml-5 ">{{gestionDeTrabajo.name}}</span>
                     </a>
                 </li>
             </ul>
@@ -184,29 +94,11 @@
                 </div>
                 <i class="fa-solid fa-chevron-left"></i>
             </a>
-            <ul #dropDownTransactions class="hidden space-y-2 text-zinc-700">
+            <ul class="hidden space-y-2 text-zinc-700" *ngFor="let planificacion of Planificacion | ObjToArray">
                 <li>
                     <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-signs-post"></i>
-                        <span class="ml-5 ">Rutas</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-sitemap"></i>
-                        <span class="ml-5 ">Tipos de rutas</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-arrows-spin"></i>
-                        <span class="ml-5 ">Ciclos de facturación</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="" type="button" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <i class="fa-solid fa-gears"></i>
-                        <span class="ml-5 ">Programación de facturación</span>
+                        <i class={{planificacion.icon}}></i>
+                        <span class="ml-5 ">{{planificacion.name}}</span>
                     </a>
                 </li>
             </ul>
@@ -218,6 +110,5 @@
             </a>
         </li>
     </ul>
-
   </div>
 </aside>

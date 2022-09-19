@@ -1,10 +1,13 @@
 <div class="flex justify-start items-center absolute top-0 left-64 right-0 w-auto h-16 bg-stone-100">
+    <div #AsSideNav class="flex justify-start ml-3 p-2 cursor-pointer" onclick="toggleSideNav()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
     <div class="flex justify-end items-center space-x-5 w-full px-5 lg:text-sm">
         <!--IDIOMAS-->
         <a routerLink="" (click)="toogleLanguageMenu()">
             <span class="text-gray-500">Español (República Dominicana)</span>
             <!--DROPDOWN IDIOMAS-->
-            <ul #AsDropdown *ngIf="isLanguageMenuOpened" class="absolute flex flex-col w-44 space-y-2 text-zinc-700 bg-white top-16 shadow-lg right-64 rounded">
+            <ul #AsDropdown *ngIf="isLanguageMenuOpened" class="absolute flex flex-col w-56 text-xs space-y-2 text-zinc-700 bg-white top-16 shadow-lg right-60 rounded">
                 <li>
                     <a routerLink="" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-100">
                         <i class="fa-brands fa-canadian-maple-leaf"></i>
@@ -14,7 +17,7 @@
                  <li>
                     <a routerLink="" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-100">
                         <i class="fa-brands fa-font-awesome"></i>
-                        <span class="ml-5 ">Español</span>
+                        <span class="ml-5 ">Español (República Dominicana)</span>
                     </a>
                 </li>
             </ul>
@@ -34,7 +37,7 @@
         </a>
         <!--END USER-->
         <!--DROPDOWN USER-->
-        <ul #AsDropdown *ngIf="isUserMenuOpened" class="absolute flex flex-col w-44 space-y-2 text-zinc-700 bg-white top-16 shadow-lg right-7 rounded">
+        <ul #AsDropdown *ngIf="isUserMenuOpened" class="absolute flex flex-col w-36 space-y-2 text-zinc-700 bg-white top-16 shadow-lg right-6 rounded text-xs">
             <li>
                 <a routerLink="" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-100">
                     <i class="fa-solid fa-user"></i>

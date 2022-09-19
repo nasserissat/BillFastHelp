@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Renderer2, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav',
@@ -7,7 +7,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class SideNavComponent implements OnInit {
   @ViewChild('subMenuTransacciones') subMenuTransacciones!: ElementRef ;
-  constructor() { 
+
+  constructor( private rederer2: Renderer2) { 
     
   }
 

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +10,13 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @ViewChild("AsDropdown") Dropdown!: ElementRef;
+  @ViewChild("AsSideNav") SideNav!: ElementRef;
+
   isLanguageMenuOpened: boolean = false;
   isUserMenuOpened: boolean = false;
-  constructor(private _eref: ElementRef) { }
+  constructor(
+    private _eref: ElementRef
+    ) { }
 
   ngOnInit(): void {
   }
@@ -36,6 +40,5 @@ export class HeaderComponent implements OnInit {
     if(!this._eref.nativeElement.contains(event.target))
     AsDropdown.classList.add('hidden');
   }
-
 
 }

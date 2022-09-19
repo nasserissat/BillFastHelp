@@ -10,6 +10,7 @@ import { ObjToArrayPipe } from './pipes/objToArray.pipe';
 import { SideNavComponent } from './shared/side-nav/side-nav.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { FacturasComponent } from './pages/Transacciones/facturas/facturas.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     ObjToArrayPipe,
     InformationPanelComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FacturasComponent
   ],
   imports: [
     BrowserModule,

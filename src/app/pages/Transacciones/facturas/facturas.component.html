@@ -14,14 +14,14 @@
                     <th>Acciones</th>
                 </tr>
               </thead>
-              <tbody *ngFor="let data of datas">
+              <tbody *ngFor="let data of datas" [ngSwitch]="1">
                   <tr>
                     <td>77551</td>
                     <td>OSCAR CUEVA</td>
                     <td>C/CENTRAL SABANA PERDIDA NO. 0 BRISA DE LOS PALMARES SABANA PERDIDA NO. 0 SECTOR 3 (SABANAPERDIDA) SABANA PERDIDA, SANTO DOMINGO NORTE, SANTO DOMINGO, Postal Code 11201</td>
                     <td>05 dic, 2022</td>
                     <td>100.00</td>
-                    <td>anulado</td>
+                    <td><span *ngSwitchCase="1" class="bg-red-600 rounded text-white text-xs p-0.5">Anulado</span></td>
                     <td>
                         <div class=" relative flex justify-between items-center content-center bg-slate-50 hover:bg-slate-200 p-1 rounded cursor-pointer" (click)="toogleActionMenu()">
                             <p class="justify-center text-sm px-1">Acciones</p>
@@ -51,7 +51,7 @@
                     <td>C/CENTRAL SABANA PERDIDA NO. 0 BRISA DE LOS PALMARES SABANA PERDIDA NO. 0 SECTOR 3 (SABANAPERDIDA) SABANA PERDIDA, SANTO DOMINGO NORTE, SANTO DOMINGO, Postal Code 11201</td>
                     <td>05 dic, 2022</td>
                     <td>100.00</td>
-                    <td>anulado</td>
+                    <td><span *ngSwitchCase="1" class="bg-cyan-500 rounded text-white text-xs p-0.5">Facturado</span></td>
                     <td>
                         <div class="flex justify-between items-center content-center bg-slate-50 hover:bg-slate-200 p-1 rounded cursor-pointer">
                             <p class="justify-center text-sm px-1">Acciones</p>

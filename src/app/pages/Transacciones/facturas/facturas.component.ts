@@ -10,21 +10,25 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 })
 export class FacturasComponent implements OnInit {
   @ViewChild("CloseActionMenu") dropdownAction!: ElementRef;
-
   isActionMenuOpened: boolean = false;
+ // ****CODIGO DE PRUEBA PARA INSERTAR REGISTROS EN LA TABLA*****
   datas: Array<number> = [];
+  // **** FIN CODIGO DE PRUEBA****
+
   constructor(private _eref: ElementRef) { }
 
   ngOnInit(): void {
+    // ****CODIGO DE PRUEBA PARA INSERTAR REGISTROS EN LA TABLA*****
     for(let i=0; i<305;i++){
       this.datas.push(i);
     }
+    // **** FIN CODIGO DE PRUEBA****
   }
 
   toogleActionMenu(): void{
     this.isActionMenuOpened = !this.isActionMenuOpened;
   }
-
+  // ESTO HACE QUE AL HACER CLICK EN EL DOCUMENT SE CIERE EL DROPDOWN DE <TD>Acciones</TD> DE LA TABLA.
   onClickOutside(event: { target: any; }){
     const ActionMenu = this.dropdownAction.nativeElement;
     if(!this._eref.nativeElement.contains(event.target))

@@ -1,7 +1,7 @@
 <div class="flex justify-between items-center absolute top-0 right-0 w-auto h-16 bg-stone-100 transition-all {{ sidenavOpen? 'left-64 ease-in-out delay-150' : 'left-0' }}">
     <div class="flex justify-center content-center items-center">
         <!--LOGO-->
-        <a routerLink="" class="flex justify-center items-center w-full px-5 py-2  {{ sidenavOpen? 'hidden' : 'transition ease-in-out delay-150 ' }}">
+        <a routerLink="" class="flex justify-center cursor-pointer items-center w-full px-5 py-2  {{ sidenavOpen? 'hidden' : 'transition ease-in-out delay-150 ' }}">
             <img src="../../../assets/logo-billfast.png" class="w-9 h-9" />
             <span class="ml-3 text-lg">BillFast</span>
         </a>
@@ -18,7 +18,7 @@
         <div class="flex justify-end items-center space-x-5 w-full px-5 lg:text-sm">
             <!--IDIOMAS-->
             <a routerLink="" (click)="toogleLanguageMenu()">
-                <span class="text-gray-500 hover:text-black">Español (República Dominicana)</span>
+                <span class="text-gray-500 hover:text-black cursor-pointer">Español (República Dominicana)</span>
                 <!--DROPDOWN IDIOMAS-->
                 <ul #AsDropdown *ngIf="isLanguageMenuOpened" class="absolute flex flex-col w-56 text-xs space-y-2 text-zinc-700 bg-white top-16 shadow-lg right-60 rounded">
                     <li>
@@ -41,9 +41,9 @@
             <!--USER-->
             <a routerLink="" class="justify" (click)="toggleUserMenu()">
             <div class="flex justify-start items-center">
-                    <span class="mr-5 text-gray-500 hover:text-black">Nasser Emil Issa Tavares</span>
+                    <span class="mr-5 text-gray-500 hover:text-black cursor-pointer">Nasser Emil Issa Tavares</span>
                     
-                    <div class="flex bg-white rounded-full w-10 h-10 justify-center items-center content-center m-0">
+                    <div class="flex bg-white rounded-full w-10 h-10 justify-center items-center content-center m-0 cursor-pointer">
                         <i class="fa-solid fa-user"></i>
                     </div>
                 </div>

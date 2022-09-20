@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, Renderer2, Output, EventEmitter } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Renderer2, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav',
@@ -15,6 +15,9 @@ export class SideNavComponent implements OnInit {
   expandedDictionary: Array<any> = [
     ['subMenuTransactions', false], ['subMenuCatalogue', false], ['subMenuCustomerService', false], ['subMenuWorkManagement', false], ['subMenuPlanification', false],
   ]
+
+  @Input() open = true;
+
   constructor( private rederer2: Renderer2) { 
     
   }

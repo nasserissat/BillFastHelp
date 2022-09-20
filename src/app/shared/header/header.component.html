@@ -1,5 +1,5 @@
-<div class="flex justify-start items-center absolute top-0 left-64 right-0 w-auto h-16 bg-stone-100">
-    <div #AsSideNav class="flex justify-start ml-3 p-2 cursor-pointer" onclick="toggleSideNav()">
+<div class="flex justify-start items-center absolute top-0 right-0 w-auto h-16 bg-stone-100 transition-all {{ sidenavOpen? 'left-64' : 'left-0' }}">
+    <div #AsSideNav class="flex justify-start ml-3 p-2 cursor-pointer" (click)="sidenav.emit()">
         <i class="fa-solid fa-bars"></i>
     </div>
     <div class="flex justify-end items-center space-x-5 w-full px-5 lg:text-sm">

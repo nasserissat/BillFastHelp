@@ -1,4 +1,4 @@
-import {Component, ElementRef, ViewChild } from '@angular/core';
+import {Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-pages',
@@ -6,6 +6,5 @@ import {Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./pages.component.scss']
 })
 export class PagesComponent{
-  
-
+  sidenavOpen = true
 }

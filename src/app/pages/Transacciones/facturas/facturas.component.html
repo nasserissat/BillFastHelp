@@ -48,6 +48,9 @@
                         </div>
                     </td>
                   </tr>
+                  <tr *ngIf="(invoiceRecords | filter:textOfSearchBar) < 1" class="text-center">
+                    <td colspan="7" class="py-1 text-3xl text-gray-500">No se encontró ningún registro :(</td>
+                </tr>
               </tbody>
         </table>
 

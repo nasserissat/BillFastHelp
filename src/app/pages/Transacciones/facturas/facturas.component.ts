@@ -96,6 +96,7 @@ export class FacturasComponent implements OnInit {
       total: '100.00',
       status: 'Facturado',
     },
+    
   ];
   // **** FIN CODIGO DE PRUEBA****
 

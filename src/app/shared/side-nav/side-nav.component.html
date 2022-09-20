@@ -1,12 +1,12 @@
-<aside #SideNav class="h-screen bg-white bottom-0 transition-all {{ open? 'w-64' : 'w-0' }}">
-    <div class="overflow-y-auto h-screen py-4 px-3 rounded-r">
+<aside #SideNav class="h-screen bg-white bottom-0 transition-all ease-in-out  {{ open? 'w-64 ease-in-out delay-150' : 'w-0' }}">
+    <div class="{{ open? 'overflow-y-auto' : 'overflow-y-hidden' }} h-screen py-4 px-3 rounded-r">
         <!--============================-->
         <!--MENU DEL SIDENAV-->
         <ul class="space-y-2">
             <!--============================-->
             <!--LOGO-->
             <li>
-                <a routerLink="" class="flex items-center justify-start w-full px-5 py-2 mb-5">
+                <a routerLink="" class="flex items-center justify-start w-full px-5 mb-5">
                     <img src="../../../assets/logo-billfast.png" class="w-9 h-9" />
                     <span class="ml-3 text-lg">BillFast</span>
                 </a>

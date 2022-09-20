@@ -1,3 +1,67 @@
-<div class="w-full h-screen flex flex-col justify-center items-center content-center">
-    
+<div class="max-w-full h-full justify-start items-start mt-5 mr-5 ml-5">
+    <p class="text-3xl text-gray-500">Facturas</p>
+    <app-searchbar></app-searchbar>
+    <div class="mt-5">
+        <table id="table" class="table-auto w-full text-sm text-left bg-white text-black cursor-default">
+            <thead>
+                <tr >
+                    <th>Número</th>
+                    <th>Cliente</th>
+                    <th>Dirección de Entrega</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let data of datas">
+                  <tr>
+                    <td>77551</td>
+                    <td>OSCAR CUEVA</td>
+                    <td>C/CENTRAL SABANA PERDIDA NO. 0 BRISA DE LOS PALMARES SABANA PERDIDA NO. 0 SECTOR 3 (SABANAPERDIDA) SABANA PERDIDA, SANTO DOMINGO NORTE, SANTO DOMINGO, Postal Code 11201</td>
+                    <td>05 dic, 2022</td>
+                    <td>100.00</td>
+                    <td>anulado</td>
+                    <td>
+                        <div class=" relative flex justify-between items-center content-center bg-slate-50 hover:bg-slate-200 p-1 rounded cursor-pointer" (click)="toogleActionMenu()">
+                            <p class="justify-center text-sm px-1">Acciones</p>
+                            <i class="fa-solid fa-chevron-down px-1"></i>
+                            <!--DROPDOWN Acciones-->
+                            <ul #DropdownAction  *ngIf="isActionMenuOpened" class="absolute flex flex-col w-40 text-xs space-y-2 text-zinc-700 bg-white right-1 top-7 shadow-lg rounded">
+                                <li>
+                                    <a routerLink="" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-slate-200">
+                                        <i class="fa-solid fa-eye"></i>
+                                    <span class="ml-5 ">Ver detalle</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a routerLink="" class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-slate-200">
+                                        <i class="fa-solid fa-print"></i>
+                                    <span class="ml-5 ">Imprimir</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!--END DROPDOWN Acciones-->
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>77551</td>
+                    <td>OSCAR CUEVA</td>
+                    <td>C/CENTRAL SABANA PERDIDA NO. 0 BRISA DE LOS PALMARES SABANA PERDIDA NO. 0 SECTOR 3 (SABANAPERDIDA) SABANA PERDIDA, SANTO DOMINGO NORTE, SANTO DOMINGO, Postal Code 11201</td>
+                    <td>05 dic, 2022</td>
+                    <td>100.00</td>
+                    <td>anulado</td>
+                    <td>
+                        <div class="flex justify-between items-center content-center bg-slate-50 hover:bg-slate-200 p-1 rounded cursor-pointer">
+                            <p class="justify-center text-sm px-1">Acciones</p>
+                            <i class="fa-solid fa-chevron-down px-1"></i>
+                        </div>
+                    </td>
+                  </tr>
+                 
+              </tbody>
+        </table>
+
+    </div>
 </div>

@@ -5,7 +5,7 @@
     <div class="flex justify-end items-center space-x-5 w-full px-5 lg:text-sm">
         <!--IDIOMAS-->
         <a routerLink="" (click)="toogleLanguageMenu()">
-            <span class="text-gray-500">Español (República Dominicana)</span>
+            <span class="text-gray-500 hover:text-black">Español (República Dominicana)</span>
             <!--DROPDOWN IDIOMAS-->
             <ul #AsDropdown *ngIf="isLanguageMenuOpened" class="absolute flex flex-col w-56 text-xs space-y-2 text-zinc-700 bg-white top-16 shadow-lg right-60 rounded">
                 <li>
@@ -28,7 +28,7 @@
         <!--USER-->
         <a routerLink="" class="justify" (click)="toggleUserMenu()">
         <div class="flex justify-start items-center">
-                <span class="mr-5">Nasser Emil Issa Tavares</span>
+                <span class="mr-5 text-gray-500 hover:text-black">Nasser Emil Issa Tavares</span>
                 
                 <div class="flex bg-white rounded-full w-10 h-10 justify-center items-center content-center m-0">
                     <i class="fa-solid fa-user"></i>

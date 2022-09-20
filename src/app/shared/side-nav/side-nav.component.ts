@@ -11,17 +11,16 @@ export class SideNavComponent implements OnInit {
   @ViewChild('subMenuCustomerService') subMenuCustomerService!: ElementRef ;
   @ViewChild('subMenuWorkManagement') subMenuWorkManagement!: ElementRef ;
   @ViewChild('subMenuPlanification') subMenuPlanification!: ElementRef ;
-  showChevronDown: boolean = false;
-  showChevronLeft: boolean = true;
-  
-  expandedDictionary: Array<boolean> = [
-    false, false, false, false, false,
+  menu: any;
+  expandedDictionary: Array<any> = [
+    ['subMenuTransactions', false], ['subMenuCatalogue', false], ['subMenuCustomerService', false], ['subMenuWorkManagement', false], ['subMenuPlanification', false],
   ]
   constructor( private rederer2: Renderer2) { 
     
   }
 
   ngOnInit(): void {
+
   }
 
   
@@ -61,37 +60,30 @@ export class SideNavComponent implements OnInit {
     CiclosDeFacturacion: {name: 'Ciclos de facturación', icon: 'fa-solid fa-arrows-spin', url: ''},
     ProgramacionDeFacturacion: {name: 'Programación de facturación', icon: 'fa-solid fa-gears', url: ''},
   }
-  changeChevron(subMenu: any){
-    if(!subMenu.nativeElement.classList.contains('hidden')){
-      this.showChevronDown = !this.showChevronDown;
-      this.showChevronLeft = !this.showChevronLeft;
-    }else{
-      this.showChevronDown = !this.showChevronDown;
-      this.showChevronLeft = !this.showChevronLeft;
-    }
+ 
+  dropdownMenus(){
   }
-  // TODO: drowpdown no funciona
+
   dropdownTransactionMenu(){
     this.subMenuTransactions.nativeElement.classList.toggle('hidden')
     this.expandedDictionary[0] = !this.expandedDictionary[0]
-  
   }
   dropdownCatalogueMenu(){
     this.subMenuCatalogue.nativeElement.classList.toggle('hidden');
-    this.changeChevron(this.subMenuCatalogue);
+    this.expandedDictionary[1] = !this.expandedDictionary[1]
   }
   dropdownCustomerServiceMenu(){
     this.subMenuCustomerService.nativeElement.classList.toggle('hidden');
-    this.changeChevron(this.subMenuCustomerService);
+    this.expandedDictionary[2] = !this.expandedDictionary[2]
   }
   dropdownWorkManagementMenu(){
     this.subMenuWorkManagement.nativeElement.classList.toggle('hidden');
-    this.changeChevron(this.subMenuWorkManagement);
+    this.expandedDictionary[3] = !this.expandedDictionary[3]
 
   }
   dropdownPlanificationMenu(){
     this.subMenuPlanification.nativeElement.classList.toggle('hidden');
-    this.changeChevron(this.subMenuPlanification);
+    this.expandedDictionary[4] = !this.expandedDictionary[4]
   }
 
 }

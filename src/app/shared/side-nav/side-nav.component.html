@@ -41,8 +41,8 @@
                         <i class="fa-solid fa-money-bill-transfer"></i>
                         <span class="ml-3">Transacciones</span>
                     </div>
-                    <i class="fa-solid fa-chevron-left" *ngIf="!expandedDictionary[0]"></i>
-                    <i class="fa-solid fa-chevron-down px-1" *ngIf="expandedDictionary[0]"></i>
+                    <i class="fa-solid fa-chevron-left" *ngIf="expandedDictionary[0]"></i>
+                    <i class="fa-solid fa-chevron-down px-1" *ngIf="!expandedDictionary[0]"></i>
                 </button>
                 <!--============================-->
                 <!--SUBMENU TRANSACCIONES-->
@@ -72,8 +72,8 @@
                         <i class="fa-solid fa-box-archive"></i>
                         <span class="ml-3">Catálogos</span>
                     </div>
-                    <i class="fa-solid fa-chevron-left" *ngIf="showChevronLeft"></i>
-                    <i class="fa-solid fa-chevron-down px-1" *ngIf="showChevronDown"></i>
+                    <i class="fa-solid fa-chevron-left" *ngIf="expandedDictionary[1]"></i>
+                    <i class="fa-solid fa-chevron-down px-1" *ngIf="!expandedDictionary[1]"></i>
                 </a>
                 <!--============================-->
                 <!--SUBMENU CATALOGOS-->
@@ -102,8 +102,8 @@
                         <i class="fa-solid fa-face-smile"></i>
                         <span class="ml-3">Servicio al cliente</span>
                     </div>
-                    <i class="fa-solid fa-chevron-left" *ngIf="showChevronLeft"></i>
-                    <i class="fa-solid fa-chevron-down px-1" *ngIf="showChevronDown"></i>
+                    <i class="fa-solid fa-chevron-left" *ngIf="expandedDictionary[2]"></i>
+                    <i class="fa-solid fa-chevron-down px-1" *ngIf="!expandedDictionary[2]"></i>
                 </a>
                 <!--============================-->
                 <!-- SUBMENU SERVICIO AL CLIENTE-->
@@ -133,8 +133,8 @@
                         <i class="fa-solid fa-box-archive"></i>
                         <span class="ml-3">Gestión del trabajo</span>
                     </div>
-                    <i class="fa-solid fa-chevron-left" *ngIf="showChevronLeft"></i>
-                    <i class="fa-solid fa-chevron-down px-1" *ngIf="showChevronDown"></i>
+                    <i class="fa-solid fa-chevron-left" *ngIf="expandedDictionary[3]"></i>
+                    <i class="fa-solid fa-chevron-down px-1" *ngIf="!expandedDictionary[3]"></i>
                 </a>
                 <!--============================-->
                 <!-- SUBMENU GESTION TRABAJO-->
@@ -164,8 +164,8 @@
                         <i class="fa-solid fa-box-archive"></i>
                         <span class="ml-3">Planificación</span>
                     </div>
-                    <i class="fa-solid fa-chevron-left" *ngIf="showChevronLeft"></i>
-                    <i class="fa-solid fa-chevron-down px-1" *ngIf="showChevronDown"></i>
+                    <i class="fa-solid fa-chevron-left" *ngIf="expandedDictionary[4]"></i>
+                    <i class="fa-solid fa-chevron-down px-1" *ngIf="!expandedDictionary[4]"></i>
                 </a>
                 <!--============================-->
                 <!-- SUBMENU PLANIFICACION-->

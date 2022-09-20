@@ -6,8 +6,17 @@ import { Component, ElementRef, OnInit, ViewChild, Renderer2, Output, EventEmitt
   styleUrls: ['./side-nav.component.scss'],
 })
 export class SideNavComponent implements OnInit {
-  @ViewChild('subMenuTransacciones') subMenuTransacciones!: ElementRef ;
-
+  @ViewChild('subMenuTransactions') subMenuTransactions!: ElementRef ;
+  @ViewChild('subMenuCatalogue') subMenuCatalogue!: ElementRef ;
+  @ViewChild('subMenuCustomerService') subMenuCustomerService!: ElementRef ;
+  @ViewChild('subMenuWorkManagement') subMenuWorkManagement!: ElementRef ;
+  @ViewChild('subMenuPlanification') subMenuPlanification!: ElementRef ;
+  showChevronDown: boolean = false;
+  showChevronLeft: boolean = true;
+  
+  expandedDictionary: Array<boolean> = [
+    false, false, false, false, false,
+  ]
   constructor( private rederer2: Renderer2) { 
     
   }
@@ -52,10 +61,37 @@ export class SideNavComponent implements OnInit {
     CiclosDeFacturacion: {name: 'Ciclos de facturación', icon: 'fa-solid fa-arrows-spin', url: ''},
     ProgramacionDeFacturacion: {name: 'Programación de facturación', icon: 'fa-solid fa-gears', url: ''},
   }
+  changeChevron(subMenu: any){
+    if(!subMenu.nativeElement.classList.contains('hidden')){
+      this.showChevronDown = !this.showChevronDown;
+      this.showChevronLeft = !this.showChevronLeft;
+    }else{
+      this.showChevronDown = !this.showChevronDown;
+      this.showChevronLeft = !this.showChevronLeft;
+    }
+  }
   // TODO: drowpdown no funciona
-  dropdown(){
-    this.subMenuTransacciones.nativeElement.classList.toogle('hidden')
-    console.log('hola')
+  dropdownTransactionMenu(){
+    this.subMenuTransactions.nativeElement.classList.toggle('hidden')
+    this.expandedDictionary[0] = !this.expandedDictionary[0]
+  
+  }
+  dropdownCatalogueMenu(){
+    this.subMenuCatalogue.nativeElement.classList.toggle('hidden');
+    this.changeChevron(this.subMenuCatalogue);
+  }
+  dropdownCustomerServiceMenu(){
+    this.subMenuCustomerService.nativeElement.classList.toggle('hidden');
+    this.changeChevron(this.subMenuCustomerService);
+  }
+  dropdownWorkManagementMenu(){
+    this.subMenuWorkManagement.nativeElement.classList.toggle('hidden');
+    this.changeChevron(this.subMenuWorkManagement);
+
+  }
+  dropdownPlanificationMenu(){
+    this.subMenuPlanification.nativeElement.classList.toggle('hidden');
+    this.changeChevron(this.subMenuPlanification);
   }
 
 }

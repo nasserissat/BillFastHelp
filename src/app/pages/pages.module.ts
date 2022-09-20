@@ -9,6 +9,7 @@ import { SideNavComponent } from '../shared/side-nav/side-nav.component';
 import { ComponentsModule } from '../Components/components.module';
 import { ObjToArrayPipe } from '../pipes/objToArray.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     CommonModule,
     ComponentsModule,
     Ng2SearchPipeModule,
+    RouterModule
     
   ]
 })

@@ -17,7 +17,7 @@
             <!--============================-->
             <!--PANEL INFORMATIVO Y LABEL DE TRANSACCIONES-->
             <li>
-                <a routerLink=""
+                <a routerLink="panel-informativo"
                     class="flex items-center justify-between w-full px-5 py-2 mb-5 rounded transition duration-75 group hover:bg-gray-300 cursor-pointer">
                     <div>
                         <i class="fa-solid fa-table-cells"></i>
@@ -48,12 +48,12 @@
                 <!--SUBMENU TRANSACCIONES-->
                 <ul #subMenuTransactions class="hidden space-y-2 text-zinc-700 cursor-pointer">
                     <li *ngFor="let transaccion of Transacciones | ObjToArray">
-                        <a routerLink="" type="button"
+                        <button type="button"
                             class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500"
                             aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                             <i class="{{ transaccion.icon }}"></i>
                             <span class="ml-5">{{ transaccion.name }}</span>
-                        </a>
+                        </button>
                     </li>
                 </ul>
                 <!--END SUBMENU TRANSACCIONES-->
@@ -65,7 +65,7 @@
             <!--============================-->
             <!--MENU CATALOGOS-->
             <li>
-                <a routerLink="" type="button" (click)="dropdownCatalogueMenu()"
+                <button type="button" (click)="dropdownCatalogueMenu()"
                     class="flex cursor-pointer items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300"
                     aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                     <div>
@@ -74,17 +74,17 @@
                     </div>
                     <i class="fa-solid fa-chevron-left" *ngIf="expandedDictionary[1]"></i>
                     <i class="fa-solid fa-chevron-down px-1" *ngIf="!expandedDictionary[1]"></i>
-                </a>
+                </button>
                 <!--============================-->
                 <!--SUBMENU CATALOGOS-->
                 <ul #subMenuCatalogue class="hidden space-y-2 text-zinc-700 cursor-pointer">
                     <li *ngFor="let catalogo of Catalogos | ObjToArray">
-                        <a routerLink="" type="button"
+                        <button type="button"
                             class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500"
                             aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                             <i class="{{ catalogo.icon }}"></i>
                             <span class="ml-5">{{ catalogo.name }}</span>
-                        </a>
+                        </button>
                     </li>
                 </ul>
                 <!--END SUBMENU CATALOGOS-->
@@ -96,7 +96,7 @@
             <!--============================-->
             <!--MENU SERVICIO AL CLIENTE-->
             <li>
-                <a routerLink="" type="button" (click)="dropdownCustomerServiceMenu()"
+                <button type="button" (click)="dropdownCustomerServiceMenu()"
                     class="flex cursor-pointer items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 ">
                     <div>
                         <i class="fa-solid fa-face-smile"></i>
@@ -104,17 +104,17 @@
                     </div>
                     <i class="fa-solid fa-chevron-left" *ngIf="expandedDictionary[2]"></i>
                     <i class="fa-solid fa-chevron-down px-1" *ngIf="!expandedDictionary[2]"></i>
-                </a>
+                </button>
                 <!--============================-->
                 <!-- SUBMENU SERVICIO AL CLIENTE-->
                 <ul #subMenuCustomerService class="hidden space-y-2 text-zinc-700 cursor-pointer" >
                     <li *ngFor="let servicioAlCliente of ServicioAlCliente | ObjToArray">
-                        <a routerLink="" type="button"
+                        <button type="button"
                             class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500"
                             aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                             <i class="{{ servicioAlCliente.icon }}"></i>
                             <span class="ml-5">{{ servicioAlCliente.name }}</span>
-                        </a>
+                        </button>
                     </li>
                 </ul>
                 <!--END SUBMENU SERVICIO AL CLIENTE-->
@@ -126,7 +126,7 @@
             <!--============================-->
             <!--MENU GESTION TRABAJO-->
             <li>
-                <a routerLink="" type="button" (click)="dropdownWorkManagementMenu()"
+                <button type="button" (click)="dropdownWorkManagementMenu()"
                     class="flex cursor-pointer items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300"
                     aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                     <div>
@@ -135,17 +135,17 @@
                     </div>
                     <i class="fa-solid fa-chevron-left" *ngIf="expandedDictionary[3]"></i>
                     <i class="fa-solid fa-chevron-down px-1" *ngIf="!expandedDictionary[3]"></i>
-                </a>
+                </button>
                 <!--============================-->
                 <!-- SUBMENU GESTION TRABAJO-->
                 <ul #subMenuWorkManagement class="hidden space-y-2 text-zinc-700 cursor-pointer">
                     <li *ngFor="let gestionDeTrabajo of GestionDeTrabajo | ObjToArray">
-                        <a routerLink="" type="button"
+                        <button type="button"
                             class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500"
                             aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                             <i class="{{ gestionDeTrabajo.icon }}"></i>
                             <span class="ml-5">{{ gestionDeTrabajo.name }}</span>
-                        </a>
+                        </button>
                     </li>
                 </ul>
                 <!--END SUBMENU GESTION DE TRABAJO-->
@@ -157,7 +157,7 @@
             <!--============================-->
             <!-- MENU PLANIFICACION-->
             <li>
-                <a routerLink="" type="button" (click)="dropdownPlanificationMenu()"
+                <button type="button" (click)="dropdownPlanificationMenu()"
                     class="flex cursor-pointer items-center justify-between w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300"
                     aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                     <div>
@@ -166,17 +166,17 @@
                     </div>
                     <i class="fa-solid fa-chevron-left" *ngIf="expandedDictionary[4]"></i>
                     <i class="fa-solid fa-chevron-down px-1" *ngIf="!expandedDictionary[4]"></i>
-                </a>
+                </button>
                 <!--============================-->
                 <!-- SUBMENU PLANIFICACION-->
                 <ul #subMenuPlanification class="hidden space-y-2 text-zinc-700 cursor-pointer">
                     <li *ngFor="let planificacion of Planificacion | ObjToArray">
-                        <a routerLink="" type="button"
+                        <button type="button"
                             class="flex items-center justify-start w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300 hover:text-blue-500"
                             aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                             <i class="{{ planificacion.icon }}"></i>
                             <span class="ml-5">{{ planificacion.name }}</span>
-                        </a>
+                        </button>
                     </li>
                 </ul>
                 <!-- END SUBMENU PLANIFICACION-->
@@ -185,12 +185,12 @@
             <!-- END MENU PLANIFICACION-->
             <!--============================-->
             <li>
-                <a routerLink="" type="button"
+                <button type="button"
                     class="flex cursor-pointer items-center w-full px-5 py-2 rounded transition duration-75 group hover:bg-gray-300"
                     aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                     <i class="fa-solid fa-print"></i>
                     <span class="ml-3">Reportes</span>
-                </a>
+                </button>
             </li>
         </ul>
         <!--END MENU DEL SIDENAV-->

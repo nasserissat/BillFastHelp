@@ -28,7 +28,7 @@ export class SideNavComponent implements OnInit {
 
   
   Transacciones = {
-    Facturas: {name:'Facturas', icon: 'fa-solid fa-file-invoice ml-0.5', url: '/'},
+    Facturas: {name:'Facturas', icon: 'fa-solid fa-file-invoice ml-0.5', url: '/transacciones/facturas'},
     Pagos: {name: 'Pagos', icon: 'fa-solid fa-receipt', url: ''},
     CambioDeDivisas:{name: 'Cambios de divisas', icon: 'fa-solid fa-file-zipper', url: ''},
     NotasDeCredito:{name: 'Notas de crédito', icon: 'fa-solid fa-money-check-dollar', url: ''},

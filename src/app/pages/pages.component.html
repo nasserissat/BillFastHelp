@@ -3,7 +3,6 @@
     <app-header [sidenavOpen]="sidenavOpen" (sidenav)="sidenavOpen = !sidenavOpen"></app-header>
     <app-footer [sidenavOpen]="sidenavOpen"></app-footer>
     <div class="absolute _ind overflow-y-scroll right-0 top-16 bottom-16 transition-all {{ sidenavOpen? 'left-64' : 'left-0' }}">
-        <!-- <app-information-panel></app-information-panel> -->
-        <app-facturas></app-facturas>
+        <router-outlet></router-outlet>
     </div>
 </div>

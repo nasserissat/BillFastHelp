@@ -11,7 +11,8 @@ import { SideNavComponent } from './shared/side-nav/side-nav.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FacturasComponent } from './pages/Transacciones/facturas/facturas.component';
-
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,8 @@ import { FacturasComponent } from './pages/Transacciones/facturas/facturas.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
